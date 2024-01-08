@@ -67,10 +67,10 @@ jobs:
       - name: Output contents
         run: ls
       - name: Get AWS permissions
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::088603850704:role/GitHubDemo1
-          role-session-name: GitHubDemo1
+          role-session-name: samplerolesession
           aws-region: ca-central-1
       - name: Deploy site
         id: deploy
